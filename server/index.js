@@ -1,9 +1,14 @@
-import express from "express";
-import mongoose from "mongoose";
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import mongoose from 'mongoose';
+
+import postRoutes from './routes/posts.js';
 
 const app = express();
 
-// password => mE3HKshwn7EJnxKo
+app.use('/posts', postRoutes)
+
 const DB_CONNECTION_URL =
   "mongodb://ahmedelkassas:mE3HKshwn7EJnxKo@ac-rrub214-shard-00-00.oanvxnx.mongodb.net:27017,ac-rrub214-shard-00-01.oanvxnx.mongodb.net:27017,ac-rrub214-shard-00-02.oanvxnx.mongodb.net:27017/?ssl=true&replicaSet=atlas-gjd6kr-shard-0&authSource=admin&retryWrites=true&w=majority";
 
