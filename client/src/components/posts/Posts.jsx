@@ -5,8 +5,6 @@ export const Posts = () => {
 
  const posts = useSelector(state => state.posts)
 
-  console.log(posts)
-
   return (
     <div>
         <Post />
